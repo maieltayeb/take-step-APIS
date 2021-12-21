@@ -37,7 +37,7 @@ const upload = multer({
 router.get(
 
   "/getAllBussinessUsers",
-    authenticationMiddleware,
+   // authenticationMiddleware,
   async (req, res, next) => {
     const users = await BusinessOwner.find().populate("country");
     res.json(users);
